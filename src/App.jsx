@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <div className="img-container">
+        <img src="./images/image-product-desktop.jpg"></img>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className="row right">
+        <h3>PERFUME</h3>
+        <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
         </p>
+        <div className="pricing">
+          <div className="saleprice">
+            <h1>$149.99</h1>
+          </div>
+          <div className="retail">
+            <s>$169.99</s>
+          </div>
+        </div>
+        <button>🛒 Add to Cart</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
